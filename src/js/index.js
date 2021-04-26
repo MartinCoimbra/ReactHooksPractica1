@@ -1,15 +1,19 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
-
-//include bootstrap npm library into the bundle
 import "bootstrap";
-
-//include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import { Home } from "./component/home.js";
+import Contador from "./component/numerador.js";
+/* Importamos modulos - "./ubicacion" */
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+function App() {
+	return (
+		<div>
+			<h1>Hola Mundo Soy React</h1>
+			<Contador />
+		</div>
+	);
+}
+/* Lo agregamos a el div del #app del documento */
+ReactDOM.render(<App />, document.querySelector("#app"));
